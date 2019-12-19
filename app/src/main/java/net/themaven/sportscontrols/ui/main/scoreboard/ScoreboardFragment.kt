@@ -11,11 +11,11 @@ import kotlinx.android.synthetic.main.fragment_scoreboard.*
 
 import net.themaven.sportscontrols.R
 import net.themaven.sportscontrols.dataHelpers.ResponseInterface
-import net.themaven.sportscontrols.dataHelpers.SportsScheduleBuilder
+import net.themaven.sportscontrols.dataHelpers.SportType
 import net.themaven.sportscontrols.model.SportsScheduleViewModel
 import net.themaven.sportscontrols.model.TimeQuantum
 
-class ScoreboardFragment(val sportType : SportsScheduleBuilder.SportType) : Fragment(), ResponseInterface {
+class ScoreboardFragment(val sportType : SportType) : Fragment(), ResponseInterface {
 
 
     var scoreboardAdapter : ScoreboardAdapter? = null
@@ -36,6 +36,8 @@ class ScoreboardFragment(val sportType : SportsScheduleBuilder.SportType) : Frag
         for (quanta in sortedQuanta) {
             scoreboard_tabs.addTab(scoreboard_tabs.newTab().setText(quanta.title))
         }
+
+        scoreboard_title.text = sportType.sportKey.toUpperCase() + " Scores"
 
         //add listener to fetch data when new quantum tab clicked
         scoreboard_tabs.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
@@ -87,7 +89,7 @@ class ScoreboardFragment(val sportType : SportsScheduleBuilder.SportType) : Frag
 
         // TODO: Rename and change types and number of parameters
         @JvmStatic
-        fun newInstance(sportType : SportsScheduleBuilder.SportType) =
+        fun newInstance(sportType : SportType) =
             ScoreboardFragment(sportType).apply {
                 arguments = Bundle().apply {
                 }

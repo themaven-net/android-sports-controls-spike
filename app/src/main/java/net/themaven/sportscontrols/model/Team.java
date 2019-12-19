@@ -2,8 +2,6 @@ package net.themaven.sportscontrols.model;
 
 import java.util.ArrayList;
 
-import kotlin.Unit;
-
 public class Team {
 
     public String name;
@@ -11,12 +9,13 @@ public class Team {
     public String abbreviation;
     public Record record;
     public ArrayList<Linescore> linescores;
-    public Integer score;
-    public Boolean isWinner; //key is is_winner
+    private Integer score;
+    public boolean isWinner; //key is is_winner
     public Location location;
 
     public class Location {
         public String name;
+        public String type;
     }
 
     public class Record {
@@ -46,6 +45,30 @@ public class Team {
         String name;
         String fullName;
         String unit;
+    }
+
+    public int getScore() {
+        if (score == null) {
+            return 0;
+        } else {
+            return score;
+        }
+    }
+
+    public int getWins() {
+        if (record == null || record.wins == null) {
+            return 0;
+        } else {
+            return record.wins;
+        }
+    }
+
+    public int getLosses() {
+        if (record == null || record.losses == null) {
+            return 0;
+        } else {
+            return record.losses;
+        }
     }
 
 }

@@ -6,4 +6,9 @@
     <color name="black">#000000</color>
     <color name="white">#FFFFFF</color>
     <color name="yellow">#f5b941</color>
+
+    <color name="light_grey">#E5E5E5</color>
+    <color name="header_grey">#7D7D7D</color>
+    <color name="dark_grey">#3A3A3A</color>
+
 </resources>

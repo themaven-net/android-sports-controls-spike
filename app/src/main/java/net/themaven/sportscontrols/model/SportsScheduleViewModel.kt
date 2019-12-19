@@ -1,7 +1,7 @@
 package net.themaven.sportscontrols.model
 
 import net.themaven.sportscontrols.dataHelpers.ResponseInterface
-import net.themaven.sportscontrols.dataHelpers.SportsScheduleBuilder
+import net.themaven.sportscontrols.dataHelpers.SportType
 import net.themaven.sportscontrols.network.ApiClient
 import retrofit2.Call
 import retrofit2.Callback
@@ -9,13 +9,13 @@ import retrofit2.Response
 import java.text.SimpleDateFormat
 import kotlin.collections.ArrayList
 
-class SportsScheduleViewModel(val sportType : SportsScheduleBuilder.SportType) {
+class SportsScheduleViewModel(val sportType : SportType) {
 
     var cachedQuanta = HashMap<String, TimeQuantum>()
     var keys = ArrayList<String>()
 
     init {
-        val quanta = SportsScheduleBuilder.getSchedule(sportType)
+        val quanta = sportType.getSchedule()
         for (i in quanta.indices) {
             keys.add(quanta[i].title)
             cachedQuanta[quanta[i].title] = quanta[i]

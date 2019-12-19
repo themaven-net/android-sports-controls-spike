@@ -1,19 +1,143 @@
-<androidx.cardview.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:orientation="vertical"
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="60dp">
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp">
 
         <TextView
-            android:id="@+id/scoreboard_fixture_title"
+            android:id="@+id/scoreboard_final_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="testing Item"/>
+            android:textColor="@color/dark_grey"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:text="FINAL"/>
 
-    </LinearLayout>
+        <View
+            android:id="@+id/scoreboard_line_1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/light_grey"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/scoreboard_final_text"/>
 
-</androidx.cardview.widget.CardView>
+        <ImageView
+            android:id="@+id/scoreboard_team_1_logo"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/yellow"
+            android:layout_below="@id/scoreboard_line_1"/>
+
+        <TextView
+            android:id="@+id/scoreboard_team_1_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/scoreboard_team_1_logo"
+            android:layout_toRightOf="@id/scoreboard_team_1_logo"
+            android:layout_marginLeft="20dp"
+            android:textColor="@color/dark_grey"
+            android:textSize="12sp"
+            android:text="Location"/>
+
+        <TextView
+            android:id="@+id/scoreboard_team_1_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/scoreboard_team_1_location"
+            android:layout_toRightOf="@id/scoreboard_team_1_logo"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="-3dp"
+            android:textColor="@color/dark_grey"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:text="Name"/>
+
+        <TextView
+            android:id="@+id/scoreboard_team_1_record"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/scoreboard_team_1_name"
+            android:layout_toRightOf="@id/scoreboard_team_1_logo"
+            android:layout_marginLeft="120dp"
+            android:layout_marginBottom="3dp"
+            android:textColor="@color/dark_grey"
+            android:textSize="12sp"
+            android:text="1-0"/>
+
+        <TextView
+            android:id="@+id/scoreboard_team_1_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/scoreboard_team_1_logo"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/dark_grey"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:text="130"/>
+
+        <ImageView
+            android:id="@+id/scoreboard_team_2_logo"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/yellow"
+            android:layout_below="@id/scoreboard_team_1_logo"/>
+
+        <TextView
+            android:id="@+id/scoreboard_team_2_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/scoreboard_team_2_logo"
+            android:layout_toRightOf="@id/scoreboard_team_2_logo"
+            android:layout_marginLeft="20dp"
+            android:textColor="@color/dark_grey"
+            android:textSize="12sp"
+            android:text="Location"/>
+
+        <TextView
+            android:id="@+id/scoreboard_team_2_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/scoreboard_team_2_location"
+            android:layout_toRightOf="@id/scoreboard_team_2_logo"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="-3dp"
+            android:textColor="@color/dark_grey"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:text="Name"/>
+
+        <TextView
+            android:id="@+id/scoreboard_team_2_record"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/scoreboard_team_2_name"
+            android:layout_toRightOf="@id/scoreboard_team_2_logo"
+            android:layout_marginLeft="120dp"
+            android:layout_marginBottom="3dp"
+            android:textColor="@color/dark_grey"
+            android:textSize="12sp"
+            android:text="0-1"/>
+
+
+        <TextView
+            android:id="@+id/scoreboard_team_2_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/scoreboard_team_2_logo"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/dark_grey"
+            android:textSize="26sp"
+            android:text="130"/>
+
+        <View
+            android:id="@+id/scoreboard_line_2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/light_grey"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/scoreboard_team_2_logo"/>
+
+    </RelativeLayout>
+

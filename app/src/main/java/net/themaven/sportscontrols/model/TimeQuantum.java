@@ -33,14 +33,4 @@ public class TimeQuantum {
         }
         return daysWithMatches;
     }
-
-    public ArrayList<Fixture> fixtures() {
-        ArrayList<Fixture> fixtures = new ArrayList<Fixture>();
-        if (dateElements != null) {
-            for (int i = 0; i < dateElements.size(); i++) {
-                fixtures.addAll(dateElements.get(i).fixtures);
-            }
-        }
-        return fixtures;
-    }
 }
