@@ -52,17 +52,17 @@ class ScheduleFragment(val sportType : SportType) : Fragment(), ResponseInterfac
             }
         })
 
-        //initialize first quanta
-        if (sortedQuanta.size > 0) {
-            fetchNewQuantum(sortedQuanta.get(0).title)
-        }
-
         //set up recyclerView
         val linearLayoutManager = LinearLayoutManager(activity)
         scoreboard_recyclerView.layoutManager = linearLayoutManager
         scheduleAdapter = ScheduleAdapter()
         //now adding the adapter to recyclerview
         scoreboard_recyclerView.adapter = scheduleAdapter
+
+        //initialize first quanta
+        if (sortedQuanta.size > 0) {
+            fetchNewQuantum(sortedQuanta.get(0).title)
+        }
 
     }
 

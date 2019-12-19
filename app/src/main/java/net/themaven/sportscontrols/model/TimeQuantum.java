@@ -1,14 +1,12 @@
 package net.themaven.sportscontrols.model;
 
-import java.lang.annotation.ElementType;
 import java.util.ArrayList;
-import java.util.Date;
 
 public class TimeQuantum {
 
     public String title;
     public TimePeriod timePeriod;
-    public ArrayList<StatsApi.DateElement> dateElements;
+    private ArrayList<StatsApi.DateElement> dateElements;
     boolean realized = false;
 
     public TimeQuantum(String title, TimePeriod timePeriod) {
@@ -19,6 +17,13 @@ public class TimeQuantum {
     public void realize(StatsApi statsApi){
         dateElements = statsApi.data.dates;
         realized = true;
+    }
+
+    public ArrayList<StatsApi.DateElement> getDateElements() {
+        if (dateElements == null) {
+            return new ArrayList<StatsApi.DateElement>();
+        }
+        return dateElements;
     }
 
     public ArrayList<StatsApi.DateElement> daysWithMatches() {

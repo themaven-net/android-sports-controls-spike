@@ -53,11 +53,6 @@ class ScoreboardFragment(val sportType : SportType) : Fragment(), ResponseInterf
             }
         })
 
-        //initialize first quanta
-        if (sortedQuanta.size > 0) {
-            fetchNewQuantum(sortedQuanta.get(0).title)
-        }
-
         //set up recyclerView
         val linearLayoutManager = LinearLayoutManager(activity)
         scoreboard_recyclerView.layoutManager = linearLayoutManager
@@ -65,6 +60,10 @@ class ScoreboardFragment(val sportType : SportType) : Fragment(), ResponseInterf
         //now adding the adapter to recyclerview
         scoreboard_recyclerView.adapter = scoreboardAdapter
 
+        //initialize first quanta
+        if (sortedQuanta.size > 0) {
+            fetchNewQuantum(sortedQuanta.get(0).title)
+        }
     }
 
     fun fetchNewQuantum(forKey : String?) {
