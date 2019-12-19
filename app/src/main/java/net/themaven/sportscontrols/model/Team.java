@@ -1,6 +1,7 @@
 package net.themaven.sportscontrols.model;
 
 import java.util.ArrayList;
+import java.util.Map;
 
 public class Team {
 
@@ -27,11 +28,7 @@ public class Team {
 
     public class TeamLogo {
         public String base;
-        public PurpleCuts cuts;
-    }
-
-    public class PurpleCuts {
-        public String cutsDefault;
+        public Map<String, String> cuts;
     }
 
     public class Linescore {
@@ -69,6 +66,10 @@ public class Team {
         } else {
             return record.losses;
         }
+    }
+
+    public String getDefaultImageURL() {
+        return logo.base + logo.cuts.get("default");
     }
 
 }

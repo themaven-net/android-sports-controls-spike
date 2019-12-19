@@ -14,7 +14,18 @@
         android:textSize="20sp"
         android:text="Title Goes Here"
         android:layout_centerHorizontal="true"
-        android:textColor="@color/header_grey"
+        android:textColor="@color/header_grey"/>
+
+
+    <TextView
+        android:id="@+id/schedule_header_standard_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:text="ALL TIMES IN EASTERN STANDARD"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/dark_grey"
+        android:layout_below="@id/schedule_header_title"
         android:layout_marginBottom="20dp"/>
 
     <TextView
@@ -24,7 +35,7 @@
         android:textSize="12sp"
         android:text="AWAY"
         android:textColor="@color/header_grey"
-        android:layout_below="@id/schedule_header_title"/>
+        android:layout_below="@id/schedule_header_standard_time"/>
 
     <TextView
         android:id="@+id/schedule_header_home"
@@ -33,7 +44,7 @@
         android:textSize="12sp"
         android:text="HOME"
         android:textColor="@color/header_grey"
-        android:layout_below="@id/schedule_header_title"
+        android:layout_below="@id/schedule_header_standard_time"
         android:layout_marginLeft="80dp"/>
 
     <TextView
@@ -43,7 +54,7 @@
         android:textSize="12sp"
         android:text="TIME"
         android:textColor="@color/header_grey"
-        android:layout_below="@id/schedule_header_title"
+        android:layout_below="@id/schedule_header_standard_time"
         android:layout_marginLeft="180dp"/>
 
     <TextView
@@ -53,7 +64,7 @@
         android:textSize="12sp"
         android:text="INFO"
         android:textColor="@color/header_grey"
-        android:layout_below="@id/schedule_header_title"
+        android:layout_below="@id/schedule_header_standard_time"
         android:layout_marginLeft="260dp"/>
 
 </RelativeLayout>

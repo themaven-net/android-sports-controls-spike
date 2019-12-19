@@ -11,6 +11,7 @@ import net.themaven.sportscontrols.R
 import net.themaven.sportscontrols.model.Fixture
 import net.themaven.sportscontrols.model.StatsApi
 import net.themaven.sportscontrols.model.TimeQuantum
+import net.themaven.sportscontrols.ui.main.customClasses.DownloadImageTask
 import net.themaven.sportscontrols.ui.main.customClasses.IndexPath
 import net.themaven.sportscontrols.ui.main.customClasses.RecyclerViewSectionedAdapter
 import java.text.SimpleDateFormat
@@ -111,7 +112,7 @@ class ScoreboardAdapter() : RecyclerViewSectionedAdapter() {
                 scoreboard_team_1_record.text = homeTeam.wins.toString() +
                         "-" + homeTeam.losses.toString()
                 scoreboard_team_1_logo.setImageDrawable(null)
-                //DownloadImageTask(scoreboard_team_1_logo).execute(homeTeam.logo.base)
+                DownloadImageTask(scoreboard_team_1_logo).execute(homeTeam.defaultImageURL)
 
                 scoreboard_team_2_location.text = awayTeam.location.name
                 scoreboard_team_2_name.text = awayTeam.name
@@ -119,7 +120,7 @@ class ScoreboardAdapter() : RecyclerViewSectionedAdapter() {
                 scoreboard_team_2_record.text = awayTeam.wins.toString() +
                         "-" + awayTeam.losses.toString()
                 scoreboard_team_2_logo.setImageDrawable(null)
-                //DownloadImageTask(scoreboard_team_2_logo).execute(awayTeam.logo.base)
+                DownloadImageTask(scoreboard_team_2_logo).execute(awayTeam.defaultImageURL)
 
             }
         }

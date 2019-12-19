@@ -13,6 +13,7 @@ import net.themaven.sportscontrols.R
 import net.themaven.sportscontrols.model.Fixture
 import net.themaven.sportscontrols.model.StatsApi
 import net.themaven.sportscontrols.model.TimeQuantum
+import net.themaven.sportscontrols.ui.main.customClasses.DownloadImageTask
 import net.themaven.sportscontrols.ui.main.customClasses.IndexPath
 import net.themaven.sportscontrols.ui.main.customClasses.RecyclerViewSectionedAdapter
 import java.text.SimpleDateFormat
@@ -92,6 +93,9 @@ class ScheduleAdapter() : RecyclerViewSectionedAdapter() {
                 schedule_card_home_team_name.text = awayTeam.abbreviation.toUpperCase()
                 schedule_card_away_team_name.text = homeTeam.abbreviation.toUpperCase()
                 schedule_card_time.text = fixture.start.utc
+
+                DownloadImageTask(schedule_card_home_team_logo).execute(homeTeam.defaultImageURL)
+                DownloadImageTask(schedule_card_away_team_logo).execute(awayTeam.defaultImageURL)
 
             }
         }

@@ -8,8 +8,7 @@
     <ImageView
         android:id="@+id/schedule_card_away_team_logo"
         android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:background="@color/yellow"/>
+        android:layout_height="20dp"/>
 
     <TextView
         android:id="@+id/schedule_card_away_team_name"
@@ -25,8 +24,7 @@
         android:id="@+id/schedule_card_home_team_logo"
         android:layout_width="20dp"
         android:layout_height="20dp"
-        android:layout_marginLeft="80dp"
-        android:background="@color/yellow"/>
+        android:layout_marginLeft="80dp"/>
 
     <TextView
         android:id="@+id/schedule_card_home_team_name"
