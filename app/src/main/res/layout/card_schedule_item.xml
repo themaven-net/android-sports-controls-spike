@@ -1,0 +1,61 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:gravity="center_vertical"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/schedule_card_away_team_logo"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@color/yellow"/>
+
+    <TextView
+        android:id="@+id/schedule_card_away_team_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:text="AWAY"
+        android:textColor="@color/dark_grey"/>
+
+    <ImageView
+        android:id="@+id/schedule_card_home_team_logo"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="80dp"
+        android:background="@color/yellow"/>
+
+    <TextView
+        android:id="@+id/schedule_card_home_team_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:text="HOME"
+        android:textStyle="bold"
+        android:textColor="@color/dark_grey"
+        android:layout_marginLeft="105dp"/>
+
+    <TextView
+        android:id="@+id/schedule_card_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:text="TIME"
+        android:textColor="@color/dark_grey"
+        android:layout_marginLeft="180dp"/>
+
+    <TextView
+        android:id="@+id/schedule_card_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:text=""
+        android:textColor="@color/header_grey"
+        android:layout_marginLeft="260dp"/>
+
+</RelativeLayout>
+

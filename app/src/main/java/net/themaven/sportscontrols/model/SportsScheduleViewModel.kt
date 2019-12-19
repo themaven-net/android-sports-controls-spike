@@ -28,13 +28,6 @@ class SportsScheduleViewModel(val sportType : SportType) {
         return sortedValues
     }
 
-    fun quantum(atIndex : Int) : TimeQuantum? {
-        return when {
-            keys.count() > atIndex -> quantum(keys.get(atIndex))
-            else -> null
-        }
-    }
-
     fun quantum(forKey : String) : TimeQuantum? {
         val quanta = cachedQuanta[forKey]
         return when {
