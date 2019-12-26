@@ -79,7 +79,6 @@ class ScheduleAdapter() : RecyclerViewSectionedAdapter() {
                 schedule_header_title.text = dayDate
             }
         }
-
     }
 
     class ScoreboardItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -92,7 +91,7 @@ class ScheduleAdapter() : RecyclerViewSectionedAdapter() {
 
                 schedule_card_home_team_name.text = awayTeam.abbreviation.toUpperCase()
                 schedule_card_away_team_name.text = homeTeam.abbreviation.toUpperCase()
-                schedule_card_time.text = fixture.start.utc
+                schedule_card_time.text = fixture.easternTime
 
                 DownloadImageTask(schedule_card_home_team_logo).execute(homeTeam.defaultImageURL)
                 DownloadImageTask(schedule_card_away_team_logo).execute(awayTeam.defaultImageURL)

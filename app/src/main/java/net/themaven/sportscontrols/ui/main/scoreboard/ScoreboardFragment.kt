@@ -86,7 +86,6 @@ class ScoreboardFragment(val sportType : SportType) : Fragment(), ResponseInterf
 
     companion object {
 
-        // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(sportType : SportType) =
             ScoreboardFragment(sportType).apply {

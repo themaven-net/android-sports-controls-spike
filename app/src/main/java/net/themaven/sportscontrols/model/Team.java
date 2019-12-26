@@ -1,5 +1,7 @@
 package net.themaven.sportscontrols.model;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.util.ArrayList;
 import java.util.Map;
 
@@ -11,6 +13,8 @@ public class Team {
     public Record record;
     public ArrayList<Linescore> linescores;
     private Integer score;
+
+    @SerializedName(value = "is_winner")
     public boolean isWinner; //key is is_winner
     public Location location;
 

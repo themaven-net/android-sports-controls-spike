@@ -1,6 +1,13 @@
 package net.themaven.sportscontrols.model;
 
+import com.orhanobut.logger.Logger;
+
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.TimeZone;
 
 //a fixture is basically a match
 public class Fixture {
@@ -39,5 +46,22 @@ public class Fixture {
         }
 
         return null;
+    }
+
+    public String getEasternTime() {
+
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
+        formatter.setTimeZone(TimeZone.getTimeZone("UTC"));
+        formatter.setTimeZone(TimeZone.getTimeZone("ETC"));
+
+        try {
+            Date date = formatter.parse(start.utc);
+            DateFormat simpleDateFormat = new SimpleDateFormat("hh:mm a");
+            String dateTitle = simpleDateFormat.format(date);
+            return dateTitle;
+        } catch (ParseException error){
+            Logger.e(error.getMessage());
+            return "Error String";
+        }
     }
 }

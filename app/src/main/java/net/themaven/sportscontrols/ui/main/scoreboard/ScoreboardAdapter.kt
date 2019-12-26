@@ -94,16 +94,18 @@ class ScoreboardAdapter() : RecyclerViewSectionedAdapter() {
                     scoreboard_final_text.visibility = View.GONE
                 }
 
+                scoreboard_team_1_score.setTypeface(Typeface.DEFAULT);
+                scoreboard_team_1_name.setTypeface(Typeface.DEFAULT);
+                scoreboard_team_2_score.setTypeface(Typeface.DEFAULT);
+                scoreboard_team_2_name.setTypeface(Typeface.DEFAULT);
+
                 if (homeTeam.isWinner) {
                     scoreboard_team_1_score.setTypeface(Typeface.DEFAULT_BOLD);
-                } else {
-                    scoreboard_team_1_score.setTypeface(Typeface.DEFAULT);
+                    scoreboard_team_1_name.setTypeface(Typeface.DEFAULT_BOLD);
                 }
-
                 if (awayTeam.isWinner) {
                     scoreboard_team_2_score.setTypeface(Typeface.DEFAULT_BOLD);
-                } else {
-                    scoreboard_team_2_score.setTypeface(Typeface.DEFAULT);
+                    scoreboard_team_2_name.setTypeface(Typeface.DEFAULT_BOLD);
                 }
 
                 scoreboard_team_1_location.text = homeTeam.location.name
