@@ -16,7 +16,6 @@ import retrofit2.http.Query;
 
 public class ApiClient {
 
-    public static final String INVALID_LOGIN_TOKEN = "invalid-login-token";
     private static Retrofit retrofit = getRetrofitWithInterceptors();
 
     private static Retrofit getRetrofitWithInterceptors() {
@@ -36,11 +35,6 @@ public class ApiClient {
             Logger.e(e.getMessage());
         }
         return retrofit;
-    }
-
-
-    public static void updateEndpoint(){
-        retrofit = getRetrofitWithInterceptors();
     }
 
     /////////////////////////////////SERVICES//////////////////////////////////////////
